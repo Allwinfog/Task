@@ -91,7 +91,7 @@ function loadController($controller){
 /* Assigning Action/Method based on the request */
 
 function launchAction($controllerObj,$path){
-//    try{
+    try{
 
         if(isset($path['action'])){
 
@@ -102,15 +102,15 @@ function launchAction($controllerObj,$path){
         }else{
             $controllerObj->error404();
         }
-    /*}catch (Throwable $e){
+    }catch (Throwable $e){
         $strFileController='controller/admin/AdminController.php';
         require_once $strFileController;
         $controllerObj=new AdminController();
         $controllerObj->error500();
-    }*/
+    }
 }
 
-/* Password hashing algo */
+/* Used Password hashing algo */
 /*
 echo $hash = password_hash("test1234", PASSWORD_DEFAULT);
 
